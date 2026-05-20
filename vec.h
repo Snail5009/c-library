@@ -1,5 +1,5 @@
-
 #pragma once
+#include <stdbool.h>
 
 #define v2d_dot_product(dest, a, b) v2d_scalar_product(dest, a, b)
 
@@ -12,6 +12,8 @@ struct Vec2D
 double v2d_length(const Vec2D *v);
 void v2d_normalised(Vec2D *dest, const Vec2D *a);
 void v2d_negated(Vec2D *dest, const Vec2D *a);
+bool v2d_isnull(const Vec2D *v);
+// in radians where angle in (-pi, pi]
 double v2d_direction(const Vec2D *v);
 
 /* The dot product in other words. */
